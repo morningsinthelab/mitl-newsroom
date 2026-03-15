@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsroom — MiTL Studio</title>
+  <meta name="description" content="Official press releases and news from MiTL Studio, the live conversation and community studio founded by Keith Bilous.">
+  <meta property="og:title" content="Newsroom — MiTL Studio">
+  <meta property="og:description" content="Official press releases and news from MiTL Studio and Mornings in the Lab.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mitl.studio/newsroom">
+  <link rel="canonical" href="https://mitl.studio/newsroom">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "MiTL Studio Newsroom",
+    "description": "Official press releases and news from MiTL Studio, the live conversation and community studio founded by Keith Bilous.",
+    "url": "https://mitl.studio/newsroom",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MiTL Studio",
+      "url": "https://mitl.studio",
+      "founder": {
+        "@type": "Person",
+        "name": "Keith Bilous",
+        "url": "https://keithbilous.com"
+      },
+      "sameAs": [
+        "https://youtube.com/@MorningsintheLab",
+        "https://youtube.com/@KeithIntheLab",
+        "https://linkedin.com/in/keithbilous",
+        "https://morningsinthelab.com",
+        "https://insidethelab.live",
+        "https://universe.mitl.studio",
+        "https://lookinmymirror.com",
+        "https://podcasts.apple.com/us/podcast/mornings-in-the-lab-with-keith-friends/id1735637203",
+        "https://keithbilous.com",
+        "https://x.com/MorningsintheLab"
+      ]
+    }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020617;
+      color: #ffffff;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-sync { font-family: 'Syncopate', sans-serif; }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(251, 191, 36, 0.15);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: #fbbf24; }
+
+    .nav-logo {
+      font-family: 'Syncopate', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-cta {
+      background: #fbbf24;
+      color: #020617 !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+
+    .nav-cta:hover {
+      background: #f59e0b;
+      color: #020617 !important;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 10rem 2rem 4rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #fbbf24;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Syncopate', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 40px rgba(251, 191, 36, 0.15);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* Releases */
+    .releases {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 2rem 6rem;
+    }
+
+    .release-card {
+      border: 1px solid rgba(251, 191, 36, 0.2);
+      border-radius: 8px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      background: rgba(15, 23, 42, 0.4);
+      backdrop-filter: blur(8px);
+      transition: border-color 0.3s;
+    }
+
+    .release-card:hover {
+      border-color: rgba(251, 191, 36, 0.5);
+    }
+
+    .release-date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #fbbf24;
+      margin-bottom: 1rem;
+    }
+
+    .release-card h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .release-card h2 a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .release-card h2 a:hover { color: #fbbf24; }
+
+    .release-excerpt {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 1.5rem;
+    }
+
+    .read-more {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fbbf24;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .read-more:hover { opacity: 0.8; }
+
+    /* Individual Release Page */
+    .release-full {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 10rem 2rem 6rem;
+    }
+
+    .release-full .release-date {
+      margin-bottom: 1.5rem;
+    }
+
+    .release-full h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 2.5rem;
+    }
+
+    .release-body {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .release-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .release-body h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .release-body blockquote {
+      border-left: 3px solid #fbbf24;
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .release-body strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .release-body a {
+      color: #fbbf24;
+      text-decoration: none;
+    }
+
+    .release-body a:hover { text-decoration: underline; }
+
+    .release-body ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .release-body ul li {
+      padding: 0.35rem 0 0.35rem 1.25rem;
+      position: relative;
+    }
+
+    .release-body ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 6px;
+      height: 6px;
+      background: #fbbf24;
+      border-radius: 50%;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: #ffffff;
+    }
+
+    .boilerplate {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(251, 191, 36, 0.15);
+    }
+
+    .boilerplate h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .link-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .link-list li {
+      padding: 0.25rem 0;
+    }
+
+    .link-list li::before { display: none; }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fbbf24;
+      text-decoration: none;
+    }
+
+    .back-link:hover { opacity: 0.8; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(251, 191, 36, 0.15);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: #fbbf24; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav { padding: 0.75rem 1rem; }
+      .nav-links { gap: 1rem; }
+      .nav-hide-mobile { display: none; }
+      .hero { padding: 8rem 1.25rem 3rem; }
+      .releases { padding: 1.5rem 1.25rem 4rem; }
+      .release-card { padding: 1.75rem; }
+      .release-full { padding: 8rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="https://mitl.studio" class="nav-logo">MiTL STUDIO</a>
+    <div class="nav-links">
+      <a href="https://mitl.studio" class="nav-hide-mobile">Home</a>
+      <a href="https://mitl.studio/newsroom" class="nav-hide-mobile">Newsroom</a>
+      <a href="https://mornings.live" class="nav-hide-mobile">Show</a>
+      <a href="https://mitl.studio#faq" class="nav-hide-mobile">FAQ</a>
+      <a href="https://ro.am/keith" class="nav-cta">Book a Call</a>
+    </div>
+  </nav>
+
+  <!-- Content rendered by JS based on route -->
+  <div id="app"></div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 MiTL Studio. Founded by <a href="https://keithbilous.com">Keith Bilous</a>. &nbsp;|&nbsp; <a href="https://youtube.com/@MorningsintheLab">YouTube</a> &nbsp;|&nbsp; <a href="https://linkedin.com/in/keithbilous">LinkedIn</a> &nbsp;|&nbsp; <a href="https://mitl.studio">mitl.studio</a></p>
+  </footer>
+
+  <script>
+    const releases = [
+      {
+        slug: 'march-2026-1000-consecutive-live-hours',
+        date: 'March 2026',
+        title: 'Mornings in the Lab Surpasses 1,000 Consecutive Live Hours Without Missing a Single Day, Cementing Position as YouTube\u2019s Longest-Running Independent Morning Show',
+        excerpt: 'Mornings in the Lab with Keith, Jon & Friends has surpassed a milestone that no other independent creator has reached in the morning daypart: 1,000 consecutive hours of live morning programming \u2014 without missing a single day.',
+        body: `
+          <p><strong>TORONTO, ONTARIO, CANADA \u2014 March 2026</strong> \u2014 Mornings in the Lab with Keith, Jon &amp; Friends has surpassed a milestone that no other independent creator has reached in the morning daypart: 1,000 consecutive hours of live morning programming \u2014 without missing a single day. Now in its third season, the daily LIVE morning show streams every weekday at 8:00 AM ET on YouTube \u2014 building a loyal community of men 30\u201355 who start their day with accountability, fitness, mindset, and real conversation.</p>
+
+          <p>The milestone arrives at a moment when YouTube\u2019s dominance over traditional media has never been more pronounced. MoffettNathanson recently crowned YouTube \u201Cthe new king of all media,\u201D valuing the platform at $500\u2013$560 billion after it generated $40.4 billion in ad revenue for 2025 \u2014 more than Disney, NBCUniversal, Paramount Skydance, and Warner Bros. Discovery combined. According to Nielsen\u2019s January 2026 Gauge report, YouTube commands 12.5% of all U.S. television viewing, more than any single streaming service or cable network. Yet the morning daypart \u2014 the hours between 6:00 AM and 10:00 AM \u2014 remains virtually unprogrammed by independent creators.</p>
+
+          <blockquote>\u201CWe showed up at 8 AM when nobody else would \u2014 and we haven\u2019t missed a single day. Over a thousand consecutive hours of live morning television, three seasons deep, building a community one conversation at a time \u2014 that\u2019s not a content strategy, that\u2019s a lifestyle.\u201D<br><br>\u2014 <strong>Keith Bilous</strong>, Founder, MiTL Studio</blockquote>
+
+          <h3>The Morning Daypart: Streaming\u2019s Biggest Untapped Opportunity</h3>
+
+          <p>Nielsen data shows streaming now accounts for 47% of all U.S. television viewing, up 71% since 2021. Streaming even surpassed the combined share of broadcast and cable for the first time in May 2025. Despite this seismic shift, the morning hours remain dominated by legacy broadcast formats \u2014 Today, Good Morning America, CBS Mornings \u2014 that haven\u2019t meaningfully evolved in decades.</p>
+
+          <p>Mornings in the Lab fills that gap with a format built for how men actually consume media in 2026: live on YouTube, available on-demand across Apple Podcasts, Spotify, and all major platforms, with daily clips and shorts driving discovery. Now in Season 3 with over 1,000 consecutive live hours and a perfect attendance record, the show\u2019s 5,700+ YouTube subscribers tune in not for polished production, but for raw, unscripted accountability \u2014 a format that traditional morning television has never attempted.</p>
+
+          <h3>Expanding the MiTL Studio Universe</h3>
+
+          <p>MiTL Studio, the live conversation and community studio behind the show, continues to scale its programming footprint. The MiTL Sports Desk (<a href="https://universe.mitl.studio">universe.mitl.studio</a>) operates an AI-powered correspondent network covering all 32 NHL markets with dedicated local coverage \u2014 the first initiative of its kind in independent sports media. The studio\u2019s digital ecosystem now spans over 30 connected properties, including the <a href="https://lookinmymirror.com">Look In My Mirror</a> accountability mirror collection, the <a href="https://insidethelab.live">Inside the Lab</a> newsletter, and multiple Substack publications targeting morning routine optimization and men\u2019s personal development.</p>
+
+          <p>With 1,700+ videos on YouTube, over 1,000 consecutive live hours across three seasons without a single missed day, and a growing catalog of clips reaching new audiences daily, Mornings in the Lab is building the infrastructure for what independent morning programming looks like in the streaming era.</p>
+
+          <h3>Frequently Asked Questions</h3>
+
+          <div class="faq-item">
+            <strong>What is Mornings in the Lab?</strong>
+            <p>Mornings in the Lab with Keith, Jon &amp; Friends is a daily LIVE morning show streaming every weekday at 8:00 AM ET on YouTube, covering personal development, fitness, mindset, entrepreneurship, and accountability for men 30-55.</p>
+          </div>
+
+          <div class="faq-item">
+            <strong>Who hosts Mornings in the Lab?</strong>
+            <p>The show is hosted by Keith Bilous (founder of MiTL Studio, former founder of ICUC \u2014 acquired for $50M, Canada\u2019s Top 40 Under 40), Jon Andersen (professional strongman, wrestler, bodybuilder), and CMartyFit (fitness coach).</p>
+          </div>
+
+          <div class="faq-item">
+            <strong>Where can I watch Mornings in the Lab?</strong>
+            <p>Live every weekday at 8:00 AM ET on YouTube: <a href="https://youtube.com/@MorningsintheLab">youtube.com/@MorningsintheLab</a>. Also available on <a href="https://podcasts.apple.com/us/podcast/mornings-in-the-lab-with-keith-friends/id1735637203">Apple Podcasts</a>, Spotify, and all major podcast platforms.</p>
+          </div>
+
+          <div class="faq-item">
+            <strong>What is MiTL Studio?</strong>
+            <p>MiTL Studio is a live conversation and community studio that builds, produces, and operates daily live shows. It also operates the MiTL Sports Desk (<a href="https://universe.mitl.studio">universe.mitl.studio</a>), an AI-powered correspondent network covering all 32 NHL markets.</p>
+          </div>
+
+          <div class="faq-item">
+            <strong>What milestone has Mornings in the Lab reached?</strong>
+            <p>The show has surpassed 1,000 consecutive hours of live morning programming across three seasons \u2014 without ever missing a day \u2014 making it the longest-running independent morning show on YouTube.</p>
+          </div>
+
+          <div class="boilerplate">
+            <h3>About Mornings in the Lab</h3>
+            <p>Mornings in the Lab with Keith, Jon &amp; Friends is a daily LIVE morning show streaming every weekday at 8:00 AM ET on YouTube. The show combines personal development, fitness, entrepreneurship, mental health, and accountability for men who want to start their day sharper, stronger, and more intentional.</p>
+            <ul class="link-list">
+              <li><strong>YouTube:</strong> <a href="https://youtube.com/@MorningsintheLab">youtube.com/@MorningsintheLab</a></li>
+              <li><strong>Apple Podcasts:</strong> <a href="https://podcasts.apple.com/us/podcast/mornings-in-the-lab-with-keith-friends/id1735637203">Apple Podcasts</a></li>
+              <li><strong>Newsletter:</strong> <a href="https://insidethelab.live">insidethelab.live</a></li>
+              <li><strong>Website:</strong> <a href="https://morningsinthelab.com">morningsinthelab.com</a></li>
+              <li><strong>Studio:</strong> <a href="https://mitl.studio">mitl.studio</a></li>
+              <li><strong>Sports Desk:</strong> <a href="https://universe.mitl.studio">universe.mitl.studio</a></li>
+              <li><strong>Mirror Collection:</strong> <a href="https://lookinmymirror.com">lookinmymirror.com</a></li>
+            </ul>
+
+            <h3>About MiTL Studio</h3>
+            <p>MiTL Studio is a live conversation and community studio founded by Keith Bilous. The studio builds, produces, and operates daily live shows using a proprietary 4-layer production system. Bilous previously founded ICUC, a social media management company that grew to over 400 employees before being acquired for $50 million. He was named one of Canada\u2019s Top 40 Under 40.</p>
+            <ul class="link-list">
+              <li><strong>Founder:</strong> <a href="https://linkedin.com/in/keithbilous">linkedin.com/in/keithbilous</a></li>
+              <li><strong>Personal Site:</strong> <a href="https://keithbilous.com">keithbilous.com</a></li>
+            </ul>
+
+            <h3>Media Contact</h3>
+            <p>Keith Bilous<br><a href="mailto:mornings@bapl.ai">mornings@bapl.ai</a><br><a href="https://mitl.studio">mitl.studio</a></p>
+          </div>
+        `
+      }
+    ];
+
+    function renderIndex() {
+      const app = document.getElementById('app');
+      let html = `
+        <div class="hero">
+          <div class="hero-label">MiTL Studio</div>
+          <h1 class="font-sync">Newsroom</h1>
+          <p>Official press releases and news from MiTL Studio and Mornings in the Lab.</p>
+        </div>
+        <div class="releases">
+      `;
+      releases.forEach(r => {
+        html += `
+          <div class="release-card">
+            <div class="release-date">${r.date}</div>
+            <h2><a href="?release=${r.slug}">${r.title}</a></h2>
+            <p class="release-excerpt">${r.excerpt}</p>
+            <a href="?release=${r.slug}" class="read-more">Read Full Release &rarr;</a>
+          </div>
+        `;
+      });
+      html += '</div>';
+      app.innerHTML = html;
+    }
+
+    function renderRelease(slug) {
+      const r = releases.find(x => x.slug === slug);
+      if (!r) { renderIndex(); return; }
+      const app = document.getElementById('app');
+      app.innerHTML = `
+        <div class="release-full">
+          <a href="/newsroom" class="back-link">&larr; Back to Newsroom</a>
+          <div class="release-date">${r.date}</div>
+          <h1>${r.title}</h1>
+          <div class="release-body">${r.body}</div>
+        </div>
+      `;
+    }
+
+    // Route
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('release');
+    if (slug) {
+      renderRelease(slug);
+    } else {
+      renderIndex();
+    }
+  </script>
+</body>
+</html>
