@@ -57,59 +57,94 @@
 
     /* Navigation */
     nav {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       right: 0;
       z-index: 100;
-      background: rgba(15, 23, 42, 0.6);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(251, 191, 36, 0.15);
-      padding: 1rem 2rem;
+      background: transparent;
+      padding: 0;
+    }
+
+    .nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      height: 72px;
+      gap: 24px;
     }
 
     nav a {
-      color: #ffffff;
+      color: rgba(255,255,255,0.55);
       text-decoration: none;
-      font-size: 0.75rem;
-      font-weight: 600;
+      font-family: 'Syncopate', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       transition: color 0.2s;
+      white-space: nowrap;
     }
 
-    nav a:hover { color: #fbbf24; }
+    nav a:hover { color: #fff; }
 
-    .nav-logo {
-      font-family: 'Syncopate', sans-serif;
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .nav-brand img {
+      height: 36px;
+      width: auto;
+    }
+
+    .nav-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.3;
+      max-width: 180px;
+      letter-spacing: 0;
+      text-transform: none;
+      font-weight: 400;
     }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 28px;
       align-items: center;
     }
 
     .nav-cta {
+      font-family: 'Syncopate', sans-serif;
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 24px;
       background: #fbbf24;
-      color: #020617 !important;
-      padding: 0.5rem 1.25rem;
-      border-radius: 4px;
+      color: #0a0f1a !important;
+      font-size: 11px;
       font-weight: 700;
-      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background 0.2s;
     }
 
     .nav-cta:hover {
-      background: #f59e0b;
-      color: #020617 !important;
+      background: #e5b635;
+      color: #0a0f1a !important;
     }
+
+    .nav-accent { color: #fbbf24 !important; font-weight: 700 !important; }
 
     /* Hero */
     .hero {
@@ -354,10 +389,19 @@
     footer a:hover { color: #fbbf24; }
 
     /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 10px; letter-spacing: 0.06em; }
+      .nav-cta { padding: 8px 16px; font-size: 10px; }
+    }
+
     @media (max-width: 768px) {
-      nav { padding: 0.75rem 1rem; }
-      .nav-links { gap: 1rem; }
+      .nav-inner { height: 60px; padding: 0 16px; }
+      .nav-tagline { display: none; }
+      .nav-links { gap: 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .nav-links::-webkit-scrollbar { display: none; }
       .nav-hide-mobile { display: none; }
+      .nav-cta { padding: 8px 14px; font-size: 9px; }
       .hero { padding: 8rem 1.25rem 3rem; }
       .releases { padding: 1.5rem 1.25rem 4rem; }
       .release-card { padding: 1.75rem; }
@@ -369,13 +413,20 @@
 
   <!-- Navigation -->
   <nav>
-    <a href="https://mitl.studio" class="nav-logo">MiTL STUDIO</a>
-    <div class="nav-links">
-      <a href="https://mitl.studio" class="nav-hide-mobile">Home</a>
-      <a href="https://mitl.studio/newsroom" class="nav-hide-mobile">Newsroom</a>
-      <a href="https://mornings.live" class="nav-hide-mobile">Show</a>
-      <a href="https://mitl.studio#faq" class="nav-hide-mobile">FAQ</a>
-      <a href="https://ro.am/keith" class="nav-cta">Book a Call</a>
+    <div class="nav-inner">
+      <a href="https://mitl.studio" class="nav-brand">
+        <img src="https://universe.mitl.studio/mitl-logo.png" alt="MiTL Studio">
+        <span class="nav-tagline">Founded by Keith Bilous, creator of the MiTL morning format.</span>
+      </a>
+      <div class="nav-links">
+        <a href="https://universe.mitl.studio/correspondents/" class="nav-hide-mobile">Correspondents</a>
+        <a href="https://universe.mitl.studio/cast/" class="nav-hide-mobile">Cast</a>
+        <a href="https://universe.mitl.studio/feed/" class="nav-hide-mobile">Feed</a>
+        <a href="https://globe.mornings.live" class="nav-hide-mobile">Globe</a>
+        <a href="https://mornings.live" class="nav-hide-mobile">Show</a>
+        <a href="https://mitl-studios-investor-briefing-920076249314.us-west1.run.app" class="nav-accent nav-hide-mobile">Investors</a>
+      </div>
+      <a href="mailto:mornings@bapl.ai" class="nav-cta">Book a Call</a>
     </div>
   </nav>
 
