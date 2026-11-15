@@ -122,7 +122,7 @@ const releases = [
 
           <p>MiTL Studio, the live conversation and community studio behind the show, continues to scale its programming footprint. The MiTL Sports Desk (<a href="https://universe.mitl.studio">universe.mitl.studio</a>) operates an AI-powered correspondent network covering all 32 NHL markets with dedicated local coverage \u2014 the first initiative of its kind in independent sports media. The studio\u2019s digital ecosystem now spans over 30 connected properties, including the <a href="https://lookinmymirror.com">Look In My Mirror</a> accountability mirror collection, the <a href="https://insidethelab.live">Inside the Lab</a> newsletter, and multiple Substack publications targeting morning routine optimization and men\u2019s personal development.</p>
 
-          <p>With 1,700+ videos on YouTube, over 1,000 consecutive live hours across three seasons without a single missed day, and a growing catalog of clips reaching new audiences daily, Mornings in the Lab is building the infrastructure for what independent morning programming looks like in the streaming era.</p>
+          <p>With 800+ episodes on YouTube, over 1,000 consecutive live hours across three seasons without a single missed day, and a growing catalog of clips reaching new audiences daily, Mornings in the Lab is building the infrastructure for what independent morning programming looks like in the streaming era.</p>
 
           <h3>Frequently Asked Questions</h3>
 
