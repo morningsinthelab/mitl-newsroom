@@ -2,5 +2,14 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "framework": null,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "query", "key": "release", "value": "(?<slug>[a-z0-9-]+)" }],
+      "destination": "/releases/:slug/",
+      "permanent": true
+    },
+    { "source": "/newsroom", "destination": "/", "permanent": true }
+  ]
 }
